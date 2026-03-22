@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: var(--font-sans);
+
+  --bg: #f4f6f8;
+  --bg-deep: #e8ecf0;
+  --bg-elevated: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  --text: #1a1d24;
+  --text-muted: #5c6370;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.12);
+  --accent-glow: rgba(37, 99, 235, 0.2);
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --bg-deep: #090c10;
+  --bg-elevated: #161b22;
+  --surface-glass: rgba(22, 27, 34, 0.9);
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,115 @@
+.movie-details-title {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--text);
+
+  html[data-theme='dark'] & {
+    background: none;
+    color: var(--text);
+  }
+}
+
+.movie-details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 40px);
+  align-items: start;
+}
+
+.movie-details-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-lg);
+  background:
+    radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.12), transparent 45%),
+    linear-gradient(145deg, #1e293b, #0f172a);
+}
+
+.movie-details-main .movie-details-meta {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.movie-details-genres {
+  margin: 0 0 20px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.movie-details-description {
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  opacity: 0.92;
+}
+
+.movie-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primary-btn,
+.ghost-btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition:
+    box-shadow 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 90%, white), var(--accent));
+  color: white;
+  box-shadow: 0 4px 16px var(--accent-glow);
+
+  &:hover {
+    box-shadow: 0 8px 28px var(--accent-glow);
+  }
+}
+
+.ghost-btn {
+  background: var(--bg-elevated);
+  border-color: var(--border-subtle);
+  color: var(--text);
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    background: var(--accent-soft);
+  }
+
+  &--active {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+}
+
+.favorites-empty {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  max-width: 420px;
+  line-height: 1.6;
+}
+
+.favorites-empty-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .movie-details-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

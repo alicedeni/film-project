@@ -1,0 +1,106 @@
+.filters-panel {
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: linear-gradient(145deg, var(--surface-glass), var(--bg-elevated));
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
+
+  html[data-theme='dark'] & {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border-color: rgba(148, 163, 184, 0.12);
+  }
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filter-group {
+  min-width: 0;
+  flex: 1 1 180px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+}
+
+.filter-placeholder {
+  font-size: 0.8125rem;
+  padding: 8px 12px;
+  border-radius: var(--radius-full);
+  border: 1px dashed var(--border-strong);
+  color: var(--text-muted);
+}
+
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  &--active {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    color: var(--text);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent);
+  }
+}
+
+.range-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  input {
+    width: 76px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    color: var(--text);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+  }
+}
+
+.range-sep {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
