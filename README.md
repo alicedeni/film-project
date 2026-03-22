@@ -34,3 +34,7 @@ npm install
    ```bash
    npm run preview
    ```
+
+
+## Live-демо:
+https://alicedeni.github.io/film-project/
